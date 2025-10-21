@@ -1,8 +1,4 @@
 import { useIsRouting, useMatch, useRoutes } from 'solid-app-router'
-import { onAuthStateChanged } from 'firebase/auth'
-import { auth } from '~/firebase/firebase'
-import { useNavigate } from 'solid-app-router'
-
 import { createEffect, createMemo, createSignal, Suspense } from 'solid-js'
 import { MiniPlayer } from '~/components/mini-player/mini-player'
 import { createMediaQuery } from '~/helpers/hooks/create-media-query'
@@ -26,18 +22,6 @@ const useIsRoute = (routes: readonly string[]) => {
 
 export const App = () => {
   useSetupApp()
-
-// Auth gate: redirect to /auth if no user
-const navigate = useNavigate()
-const isAuthRoute = useMatch(() => '/auth')
-createEffect(() => {
-  onAuthStateChanged(auth, (u) => {
-    if (!u && !isAuthRoute()) {
-      navigate('/auth', { replace: true })
-    }
-  })
-})
-useSetupApp()
 
   const Routes = useRoutes(ROUTES)
   const isRouting = useIsRouting()
