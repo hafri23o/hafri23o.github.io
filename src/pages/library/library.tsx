@@ -33,25 +33,14 @@ const TopBar = (props: TopBar) => {
   const onMenuClickHandler = (e: MouseEvent) => {
     menu.show(
       [
-        {
-          name: 'Settings',
-          action: () => navigate('/settings'),
-        },
-        {
-          name: 'About',
-          action: () => navigate('/about'),
-        },
-        {
-          name: 'Coplay',
-          action: () => navigate('/room'),
-        },
+        { name: 'Settings', action: () => navigate('/settings') },
+        { name: 'About', action: () => navigate('/about') },
+        { name: 'Coplay', action: () => navigate('/room') },
       ],
       e.target as HTMLElement,
       {
         anchor: true,
-        preferredAlign: {
-          horizontal: 'right',
-        },
+        preferredAlign: { horizontal: 'right' },
       },
     )
   }
@@ -95,29 +84,34 @@ const TopBar = (props: TopBar) => {
   }
 
   return (
-    <AppTopBar mainButton={false} title='Library' belowContent={props.tabs}>
-      {/*  New top-left button */}
-      <IconButton
-        icon='heart'
-        title='Support'
-        onClick={() => navigate('/settings')}
-        style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)' }}
-      />
-
+    <AppTopBar
+      mainButton={false}
+      title="Library"
+      belowContent={props.tabs}
+      // 🆕 Adds button on top-left
+      leadingContent={
+        <IconButton
+          icon="heart"
+          title="Support"
+          onClick={() => navigate('/settings')}
+        />
+      }
+    >
       <Show when={installEvent()}>
         <button class={styles.tonalButton} onClick={onInstallClickHandler}>
           Install
         </button>
       </Show>
+
       <IconButton
-        icon='search'
-        title='Search'
+        icon="search"
+        title="Search"
         onClick={() => navigate('/search')}
       />
-      <IconButton icon='sort' title='Sort' onClick={onSortMenuHandler} />
+      <IconButton icon="sort" title="Sort" onClick={onSortMenuHandler} />
       <IconButton
-        icon='moreVertical'
-        title='More actions'
+        icon="moreVertical"
+        title="More actions"
         onClick={onMenuClickHandler}
       />
     </AppTopBar>
