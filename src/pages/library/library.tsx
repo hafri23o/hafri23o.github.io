@@ -64,20 +64,14 @@ const TopBar = (props: TopBar) => {
       artists: MusicItemType.ARTIST,
       playlists: MusicItemType.PLAYLIST,
     }
-
     const page = routeMatch()?.params.page as keyof typeof PAGE_TO_TYPE_MAP
-
     return PAGE_TO_TYPE_MAP[page]
   })
 
   const onSortMenuHandler = (e: MouseEvent) => {
     const pageType = selectedPage()
     const pageConfig = CONFIG.find((c) => c.type === pageType)
-
-    if (!pageConfig || pageType === undefined) {
-      return
-    }
-
+    if (!pageConfig || pageType === undefined) return
     const menuItems = pageConfig.sortOptions.map((item) => ({
       name: item.name,
       action: () => {
@@ -85,7 +79,6 @@ const TopBar = (props: TopBar) => {
       },
       selected: libraryState.sortKeys[pageType] === item.key,
     }))
-
     menu.show(menuItems, e.target as HTMLElement, {
       anchor: true,
       preferredAlign: { horizontal: 'right' },
@@ -95,22 +88,22 @@ const TopBar = (props: TopBar) => {
 
   const onInstallClickHandler = () => {
     const installE = installEvent()
-    if (!installE) {
-      return
-    }
-
-    installE
-      .prompt()
-      .then(() => installE.userChoice)
-      .then((choice) => {
-        if (choice.outcome === 'accepted') {
-          setInstallEvent(undefined)
-        }
-      })
+    if (!installE) return
+    installE.prompt().then(() => installE.userChoice).then((choice) => {
+      if (choice.outcome === 'accepted') setInstallEvent(undefined)
+    })
   }
 
   return (
     <AppTopBar mainButton={false} title='Library' belowContent={props.tabs}>
+      {/*  New top-left button */}
+      <IconButton
+        icon='heart'
+        title='Support'
+        onClick={() => navigate('/settings')}
+        style={{ position: 'absolute', left: '10px', top: '50%', transform: 'translateY(-50%)' }}
+      />
+
       <Show when={installEvent()}>
         <button class={styles.tonalButton} onClick={onInstallClickHandler}>
           Install
