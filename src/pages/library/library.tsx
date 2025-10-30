@@ -66,23 +66,17 @@ const TopBar = (props: TopBar) => {
     }
 
     const page = routeMatch()?.params.page as keyof typeof PAGE_TO_TYPE_MAP
-
     return PAGE_TO_TYPE_MAP[page]
   })
 
   const onSortMenuHandler = (e: MouseEvent) => {
     const pageType = selectedPage()
     const pageConfig = CONFIG.find((c) => c.type === pageType)
-
-    if (!pageConfig || pageType === undefined) {
-      return
-    }
+    if (!pageConfig || pageType === undefined) return
 
     const menuItems = pageConfig.sortOptions.map((item) => ({
       name: item.name,
-      action: () => {
-        libraryActions.sort({ type: pageType, key: item.key as 'name' })
-      },
+      action: () => libraryActions.sort({ type: pageType, key: item.key as 'name' }),
       selected: libraryState.sortKeys[pageType] === item.key,
     }))
 
@@ -95,36 +89,39 @@ const TopBar = (props: TopBar) => {
 
   const onInstallClickHandler = () => {
     const installE = installEvent()
-    if (!installE) {
-      return
-    }
+    if (!installE) return
+    installE.prompt().then(() => installE.userChoice).then((choice) => {
+      if (choice.outcome === 'accepted') setInstallEvent(undefined)
+    })
+  }
 
-    installE
-      .prompt()
-      .then(() => installE.userChoice)
-      .then((choice) => {
-        if (choice.outcome === 'accepted') {
-          setInstallEvent(undefined)
-        }
-      })
+  // ✅ Donate button handler
+  const onDonateClickHandler = () => {
+    navigate('/settings')
   }
 
   return (
-    <AppTopBar mainButton={false} title='Library' belowContent={props.tabs}>
+    <AppTopBar mainButton={false} title="Library" belowContent={props.tabs}>
+      {/* ✅ Donate button added right after Library title */}
+      <button class={styles.tonalButton} onClick={onDonateClickHandler}>
+        Donate
+      </button>
+
       <Show when={installEvent()}>
         <button class={styles.tonalButton} onClick={onInstallClickHandler}>
           Install
         </button>
       </Show>
+
       <IconButton
-        icon='search'
-        title='Search'
+        icon="search"
+        title="Search"
         onClick={() => navigate('/search')}
       />
-      <IconButton icon='sort' title='Sort' onClick={onSortMenuHandler} />
+      <IconButton icon="sort" title="Sort" onClick={onSortMenuHandler} />
       <IconButton
-        icon='moreVertical'
-        title='More actions'
+        icon="moreVertical"
+        title="More actions"
         onClick={onMenuClickHandler}
       />
     </AppTopBar>
@@ -172,7 +169,6 @@ const NavigationButtons = (props: NavigationButtonsProps) => (
 
 const Library = (): JSXElement => {
   const [entities] = useEntitiesStore()
-
   const isMedium = createMediaQuery('(max-width: 500px)')
 
   const selectedPage = useMapRouteToValue({
@@ -182,9 +178,7 @@ const Library = (): JSXElement => {
     '/library/playlists': () => MusicItemType.PLAYLIST,
   })
 
-  const pageConfig = createMemo(
-    () => CONFIG.find((c) => c.type === selectedPage())!,
-  )
+  const pageConfig = createMemo(() => CONFIG.find((c) => c.type === selectedPage())!)
 
   return (
     <Scaffold
@@ -193,20 +187,20 @@ const Library = (): JSXElement => {
         <TopBar
           tabs={
             isMedium() &&
-            !IS_DEVICE_A_MOBILE && <NavigationButtons type='tabs' />
+            !IS_DEVICE_A_MOBILE && <NavigationButtons type="tabs" />
           }
         />
       }
-      navRail={!isMedium() && <NavigationButtons type='rail' />}
+      navRail={!isMedium() && <NavigationButtons type="rail" />}
       bottomBar={
-        isMedium() && IS_DEVICE_A_MOBILE && <NavigationButtons type='bottom' />
+        isMedium() && IS_DEVICE_A_MOBILE && <NavigationButtons type="bottom" />
       }
     >
       <Show
         when={Object.keys(entities.tracks).length}
         fallback={
           <MessageBanner
-            title='Your Library is empty'
+            title="Your Library is empty"
             button={{
               title: 'Import some music',
               href: '/settings',
