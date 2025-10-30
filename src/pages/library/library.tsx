@@ -88,7 +88,7 @@ const TopBar = (props: TopBar) => {
       mainButton={false}
       title="Library"
       belowContent={props.tabs}
-      // 🆕 Adds button on top-left
+      //  Adds button on top-left
       leadingContent={
         <IconButton
           icon="heart"
