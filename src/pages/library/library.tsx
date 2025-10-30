@@ -112,7 +112,7 @@ const TopBar = (props: TopBar) => {
       />
       <IconButton icon="sort" title="Sort" onClick={onSortMenuHandler} />
 
-      {/* ✅ Donate button moved to the right side */}
+      {/*  Donate button moved to the right side */}
       <button class={styles.tonalButton} onClick={onDonateClickHandler}>
         Donate
       </button>
@@ -124,7 +124,6 @@ const TopBar = (props: TopBar) => {
       />
     </AppTopBar>
   )
-}
 }
 
 const NavButton = (props: LibraryPageConfig) => (
