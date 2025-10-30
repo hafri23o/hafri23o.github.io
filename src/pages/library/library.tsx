@@ -49,9 +49,7 @@ const TopBar = (props: TopBar) => {
       e.target as HTMLElement,
       {
         anchor: true,
-        preferredAlign: {
-          horizontal: 'right',
-        },
+        preferredAlign: { horizontal: 'right' },
       },
     )
   }
@@ -95,18 +93,12 @@ const TopBar = (props: TopBar) => {
     })
   }
 
-  // ✅ Donate button handler
   const onDonateClickHandler = () => {
     navigate('/settings')
   }
 
   return (
     <AppTopBar mainButton={false} title="Library" belowContent={props.tabs}>
-      {/* ✅ Donate button added right after Library title */}
-      <button class={styles.tonalButton} onClick={onDonateClickHandler}>
-        Donate
-      </button>
-
       <Show when={installEvent()}>
         <button class={styles.tonalButton} onClick={onInstallClickHandler}>
           Install
@@ -119,6 +111,12 @@ const TopBar = (props: TopBar) => {
         onClick={() => navigate('/search')}
       />
       <IconButton icon="sort" title="Sort" onClick={onSortMenuHandler} />
+
+      {/* ✅ Donate button moved to the right side */}
+      <button class={styles.tonalButton} onClick={onDonateClickHandler}>
+        Donate
+      </button>
+
       <IconButton
         icon="moreVertical"
         title="More actions"
@@ -126,6 +124,7 @@ const TopBar = (props: TopBar) => {
       />
     </AppTopBar>
   )
+}
 }
 
 const NavButton = (props: LibraryPageConfig) => (
