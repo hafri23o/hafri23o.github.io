@@ -2,8 +2,8 @@ import { Show, createSignal, onMount } from 'solid-js';
 import { Scaffold } from '~/components/scaffold/scaffold';
 
 // ---------- DPO ENV VARS ----------
-const DPO_SUBSCRIBE_LINK = import.meta.env.VITE_DPO_SUBSCRIBE_LINK; // e.g. "https://secure.3gdirectpay.com/payv2.asp?ID=..."
-const DPO_DONATE_LINK    = import.meta.env.VITE_DPO_DONATE_LINK;    // e.g. "https://secure.3gdirectpay.com/payv2.asp?ID=..."
+const DPO_SUBSCRIBE_LINK = import.meta.env.VITE_DPO_SUBSCRIBE_LINK;
+const DPO_DONATE_LINK = import.meta.env.VITE_DPO_DONATE_LINK;
 
 // ---------- SIMPLE PAGE ----------
 export default function SettingsPage() {
@@ -19,70 +19,57 @@ export default function SettingsPage() {
   const hasPaymentLinks = Boolean(DPO_SUBSCRIBE_LINK || DPO_DONATE_LINK);
 
   return (
-    <Scaffold title="Settings"> 
-      <div style={{
-        padding: '20px',
-        display: 'grid',
-        gap: '16px',
-        'grid-template-columns': '1fr',
-        'max-width': '520px',
-        margin: 'auto auto'
-      }}>
+    <Scaffold title="Settings">
+      {/*  Make this container scrollable */}
+      <div
+        style={{
+          padding: '20px',
+          display: 'grid',
+          gap: '16px',
+          'grid-template-columns': '1fr',
+          'max-width': '520px',
+          margin: '0 auto',
+          'overflow-y': 'auto',        // <--- enables vertical scroll
+          height: '100vh',             // <--- fills viewport
+          'box-sizing': 'border-box',
+        }}
+      >
         <h1 style={{ 'font-size': '22px', 'font-weight': 700, 'margin-bottom': '8px' }}>
           Support this project
         </h1>
+
         <p style={{ color: '#6b6b6b', 'margin-top': '-6px' }}>
           Choose a subscription or make a one-time donation. It keeps the music online ♥
         </p>
 
         <Show when={statusMsg()}>
-          <div style={{
-            padding: '12px 14px',
-            background: '#eef8ee',
-            color: '#145a32',
-            'border-radius': '12px'
-          }}>
+          <div
+            style={{
+              padding: '12px 14px',
+              background: '#eef8ee',
+              color: '#145a32',
+              'border-radius': '12px',
+            }}
+          >
             {statusMsg()}
           </div>
         </Show>
 
-        {/* SUBSCRIBE (Weekly) */}
-        <PaymentCard
-          title="Donate $5"
-          link={DPO_SUBSCRIBE_LINK}
-          buttonText="DONATE $5"
-        />
+        <PaymentCard title="Donate $5" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $5" />
+        <PaymentCard title="Donate $20" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $20" />
+        <PaymentCard title="Donate $100" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $100" />
+        <PaymentCard title="Donate $500" link={DPO_DONATE_LINK} buttonText="DONATE $500" />
 
-        {/* SUBSCRIBE (Monthly) */}
-        <PaymentCard
-          title="Donate $20"
-          link={DPO_SUBSCRIBE_LINK}
-          buttonText="DONATE $20"
-        />
-  
-       {/* SUBSCRIBE (Monthly) */}
-        <PaymentCard
-          title="Donate $100"
-          link={DPO_SUBSCRIBE_LINK}
-          buttonText="DONATE $100"
-        />
-   
-        {/* DONATE */}
-        <PaymentCard
-          title="Donate $500"
-          link={DPO_DONATE_LINK}
-          buttonText="DONATE $500"
-        />
-
-        {/* If nothing configured */}
         <Show when={!hasPaymentLinks}>
-          <div style={{
-            padding: '12px 14px',
-            background: '#fff7e6',
-            color: '#6b3e00',
-            'border-radius': '12px',
-            border: '1px solid #ffe2b3'
-          }}>
+          <div
+            style={{
+              padding: '12px 14px',
+              background: '#fff7e6',
+              color: '#6b3e00',
+              'border-radius': '12px',
+              border: '1px solid #ffe2b3',
+            }}
+          >
             No DPO links found. Add env vars VITE_DPO_SUBSCRIBE_LINK / VITE_DPO_DONATE_LINK.
           </div>
         </Show>
@@ -91,18 +78,21 @@ export default function SettingsPage() {
   );
 }
 
-function PaymentCard(props: { title: string; desc: string; link?: string; buttonText: string }) {
+// ---------- PAYMENT CARD ----------
+function PaymentCard(props: { title: string; desc?: string; link?: string; buttonText: string }) {
   return (
-    <section style={{
-      background: '#fbf7ff',
-      padding: '18px',
-      'border-radius': '16px',
-      border: '1px solid #efe6ff',
-      display: 'grid',
-      gap: '10px'
-    }}>
+    <section
+      style={{
+        background: '#fbf7ff',
+        padding: '18px',
+        'border-radius': '16px',
+        border: '1px solid #efe6ff',
+        display: 'grid',
+        gap: '10px',
+      }}
+    >
       <h2 style={{ 'font-size': '18px', margin: 0 }}>{props.title}</h2>
-      <p style={{ color: '#5b5b5b', margin: 0 }}>{props.desc}</p>
+      {props.desc && <p style={{ color: '#5b5b5b', margin: 0 }}>{props.desc}</p>}
 
       <Show when={props.link}>
         <a
@@ -128,6 +118,6 @@ function buttonStyle(): any {
     background: '#6d57c7',
     color: 'white',
     'text-align': 'center',
-    'box-shadow': '0 4px 14px rgba(0,0,0,0.08)'
+    'box-shadow': '0 4px 14px rgba(0,0,0,0.08)',
   };
 }
