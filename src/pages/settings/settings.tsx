@@ -55,11 +55,11 @@ export default function SettingsPage() {
           </div>
         </Show>
 
-        <PaymentCard title="Donate $5" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $5" />
-        <PaymentCard title="Donate $20" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $20" />
-        <PaymentCard title="Donate $100" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $100" />
-        <PaymentCard title="Donate $500" link={DPO_SUBSCRIBE_LINK} buttonText="DONATE $500" />
-        <PaymentCard title="Donate $2000" link={DPO_DONATE_LINK} buttonText="DONATE $2000" />
+        <PaymentCard title="Donate $5" link='www.google.com' buttonText="DONATE $5" />
+        <PaymentCard title="Donate $20" link='www.google.com' buttonText="DONATE $20" />
+        <PaymentCard title="Donate $100" link='www.google.com' buttonText="DONATE $100" />
+        <PaymentCard title="Donate $500" link='www.google.com' buttonText="DONATE $500" />
+        <PaymentCard title="Donate $2000" link='www.google.com' buttonText="DONATE $2000" />
 
         <Show when={!hasPaymentLinks}>
           <div
