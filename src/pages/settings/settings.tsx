@@ -57,21 +57,21 @@ export default function SettingsPage() {
         <PaymentCard
           title="Donate $20"
           link={DPO_SUBSCRIBE_LINK}
-          buttonText="SUBSCRIBE"
+          buttonText="DONATE $20"
         />
   
        {/* SUBSCRIBE (Monthly) */}
         <PaymentCard
           title="Donate $100"
           link={DPO_SUBSCRIBE_LINK}
-          buttonText="SUBSCRIBE"
+          buttonText="DONATE $100"
         />
    
         {/* DONATE */}
         <PaymentCard
           title="Donate $500"
           link={DPO_DONATE_LINK}
-          buttonText="DONATE"
+          buttonText="DONATE $500"
         />
 
         {/* If nothing configured */}
