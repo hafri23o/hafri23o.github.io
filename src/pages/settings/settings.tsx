@@ -59,7 +59,7 @@ export default function SettingsPage() {
           link={DPO_SUBSCRIBE_LINK}
           buttonText="SUBSCRIBE"
         />
-
+  
        {/* SUBSCRIBE (Monthly) */}
         <PaymentCard
           title="Donate $100"
