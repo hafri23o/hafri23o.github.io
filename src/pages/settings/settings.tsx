@@ -48,24 +48,28 @@ export default function SettingsPage() {
 
         {/* SUBSCRIBE (Weekly) */}
         <PaymentCard
-          title="Subscribe (weekly)"
-          desc="Recommended for first-time try-outs."
+          title="Donate $5"
           link={DPO_SUBSCRIBE_LINK}
-          buttonText="SUBSCRIBE"
+          buttonText="DONATE $5"
         />
 
         {/* SUBSCRIBE (Monthly) */}
         <PaymentCard
-          title="Subscribe (monthly)"
-          desc="Unlock HD streaming and help us grow."
+          title="Donate $20"
           link={DPO_SUBSCRIBE_LINK}
           buttonText="SUBSCRIBE"
         />
 
+       {/* SUBSCRIBE (Monthly) */}
+        <PaymentCard
+          title="Donate $100"
+          link={DPO_SUBSCRIBE_LINK}
+          buttonText="SUBSCRIBE"
+        />
+   
         {/* DONATE */}
         <PaymentCard
-          title="Donate (one-time)"
-          desc="A quick tip keeps the servers alive. Thank you!"
+          title="Donate $500"
           link={DPO_DONATE_LINK}
           buttonText="DONATE"
         />
