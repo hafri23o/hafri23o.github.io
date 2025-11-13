@@ -19,7 +19,7 @@ export default function SettingsPage() {
   const hasPaymentLinks = Boolean(DPO_SUBSCRIBE_LINK || DPO_DONATE_LINK);
 
   return (
-    <Scaffold title="Settings">
+    <Scaffold title="Donate">
       {/*  Make this container scrollable */}
       <div
         style={{
