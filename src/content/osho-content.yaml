@@ -30,14 +30,14 @@ series:
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Smile"
+    name: "Smile"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Smile"
+        name: "Smile"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -45,28 +45,28 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Proof"
+    name: "Proof"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Proof"
+        name: "Proof"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Disappear"
+    name: "Disappear"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Disappear"
+        name: "Disappear"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -74,57 +74,28 @@ series:
         topics: []
 
        
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Bend it"
+    name: "Bend it"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Bend it"
+        name: "Bend it"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Glow up"
+    name: "Glow up"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-
-        
-  - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-        
-   - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Glow up"
+        name: "Glow up"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -132,57 +103,28 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Picture me"
+    name: "Picture me"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Picture me"
+        name: "Picture me"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Glitter is gold"
+    name: "Glitter is gold"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-
-        
-  - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-        
-   - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Glitter is gold"
+        name: "Glitter is gold"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -190,57 +132,28 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Beg me"
+    name: "Beg me"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Beg me"
+        name: "Beg me"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Focus"
+    name: "Focus"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-
-        
-  - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-        
-   - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Focus"
+        name: "Focus"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -248,57 +161,28 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Fanatsy"
+    name: "Fanatsy"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Fanatsy"
+        name: "Fanatsy"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Shadows"
+    name: "Shadows"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-
-        
-  - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-        
-   - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Shadows"
+        name: "Shadows"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -306,57 +190,28 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Blind"
+    name: "Blind"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Blind"
+        name: "Blind"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Burn"
+    name: "Burn"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-
-        
-  - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
-        duration: 300  # 00:04:53
-        trackNo: 1
-        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
-        description: "No Lyrics yet"
-        topics: []
-        
-   - id: "Eternal youth"
-    name: "Eternal youth"
-    description: "Only samples available, please help donate to help publish."
-    year: "2025"
-    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
-    tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Burn"
+        name: "Burn"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
@@ -364,28 +219,173 @@ series:
         topics: []
 
         
-  - id: "Eternal youth"
-    name: "Eternal youth"
+  - id: "Guilty"
+    name: "Guilty"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Guilty"
+        name: "Guilty"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
         description: "No Lyrics yet"
         topics: []
         
-   - id: "Eternal youth"
-    name: "Eternal youth"
+   - id: "Honesty"
+    name: "Honesty"
     description: "Only samples available, please help donate to help publish."
     year: "2025"
     image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
     tracks:
-      - id: "Eternal youth"
-        name: "Eternal youth"
+      - id: "Honesty"
+        name: "Honesty"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+
+        
+  - id: "Blood"
+    name: "Blood"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Blood"
+        name: "Blood"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+        
+   - id: "Inner Beast"
+    name: "Inner Beast"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Inner Beast"
+        name: "Inner Beast"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+
+        
+  - id: "Turned off"
+    name:"Turned off"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Turned off"
+        name: "Turned off"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+        
+   - id: "Silence"
+    name: "Silence"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Silence"
+        name: "Silence"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+
+        
+  - id: "Maddness"
+    name: "Maddness"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Maddness"
+        name: "Maddness"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+        
+   - id: "Intuition"
+    name: "Intuition"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Intuition"
+        name: "Intuition"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+
+        
+  - id: "Read the room"
+    name: "Read the room"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Read the room"
+        name: "Read the room"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+        
+   - id: "Secrets"
+    name: "Secrets"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Secrets"
+        name: "Secrets"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+
+        
+  - id: "Compare me"
+    name: "Compare me"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Compare me"
+        name: "Compare me"
+        duration: 300  # 00:04:53
+        trackNo: 1
+        audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
+        description: "No Lyrics yet"
+        topics: []
+        
+   - id: "Stuck"
+    name: "Stuck"
+    description: "Only samples available, please help donate to help publish."
+    year: "2025"
+    image: "/images/albums/tao-upanishad-by-osho-01-127.webp"
+    tracks:
+      - id: "Stuck"
+        name: "Stuck"
         duration: 300  # 00:04:53
         trackNo: 1
         audioUrl: "https://oshoworld.com/wp-content/uploads/2020/11/Hindi%20Audio/OSHO-Tao_Upanishad_001.mp3"
