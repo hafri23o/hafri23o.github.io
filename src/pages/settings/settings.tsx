@@ -39,8 +39,8 @@ export default function SettingsPage() {
         </h1>
 
         <p style={{ color: '#6b6b6b', 'margin-top': '-6px' }}>
-          Donate bitcoin to this address: bc1qhkv9gps0vr4wdjf9eaze2t9wwrxjxzcz0el3np   
-
+          Donate bitcoin to this address: bc1qhkv9gps0vr4wdjf9eaze2t9wwrxjxzcz0el3np                                                        
+     
           OR
 
           
@@ -59,11 +59,11 @@ export default function SettingsPage() {
           </div>
         </Show>
 
-        <PaymentCard title="Donate $5" link='www.google.com' buttonText="DONATE $5" />
-        <PaymentCard title="Donate $20" link='www.google.com' buttonText="DONATE $20" />
-        <PaymentCard title="Donate $100" link='www.google.com' buttonText="DONATE $100" />
-        <PaymentCard title="Donate $500" link='www.google.com' buttonText="DONATE $500" />
-        <PaymentCard title="Donate $2000" link='www.google.com' buttonText="DONATE $2000" />
+        <PaymentCard title="Donate $5" link="https://www.google.com" buttonText="DONATE $5" />
+        <PaymentCard title="Donate $20" link="https://www.google.com" buttonText="DONATE $20" />
+        <PaymentCard title="Donate $100" link="https://www.google.com" buttonText="DONATE $100" />
+        <PaymentCard title="Donate $500" link="https://www.google.com" buttonText="DONATE $500" />
+        <PaymentCard title="Donate $2000" link="https://www.google.com" buttonText="DONATE $2000" />
 
         <Show when={!hasPaymentLinks}>
           <div
