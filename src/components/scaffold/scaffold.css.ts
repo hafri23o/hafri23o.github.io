@@ -4,11 +4,12 @@ import { sprinkles } from '~/styles/styles.css'
 export const container = style([
   sprinkles({
     surface: 'surface',
+    overflow: 'hidden',
   }),
   style({
     contain: 'strict',
     gridArea: '1 / 1',
-    minHeight: '100vh', //  let it expand vertically
+    height: '100%',
     width: '100%',
     transformOrigin: 'center center',
     display: 'grid',
@@ -19,7 +20,6 @@ export const container = style([
       'nav-rail content'
       'bottom-bar bottom-bar'
     `,
-    overflow: 'hidden', //  keep this if you only want inner scrolling (see below)
   }),
 ])
 
@@ -42,9 +42,7 @@ export const bottomBar = style({
 
 export const content = style({
   gridArea: 'content',
-  flex: 1,
-  overflowY: 'auto',   // allow vertical scrolling
-  overflowX: 'hidden',
-  display: 'block',    //  don't use flex here — flex containers don’t scroll easily
-  height: 'auto',      //  let height grow
+  height: '100%',
+  overflow: 'hidden',
+  display: 'flex',
 })
