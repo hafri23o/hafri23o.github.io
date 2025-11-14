@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import solidPlugin from 'vite-plugin-solid'
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 import { createHtmlPlugin } from 'vite-plugin-html'
-// import { ViteWebfontDownload } from 'vite-plugin-webfont-dl' // Removed - no longer needed
 import manifest from './package.json'
 import { mangleClassNames } from './lib/vite-mangle-classnames'
 import { injectScriptsToHtmlDuringBuild } from './lib/vite-inject-scripts-to-html'
@@ -16,66 +15,61 @@ const createMScreenshot = (name: string, sizes: string) => ({
 })
 
 export default defineConfig({
-  // Set base path for GitHub Pages deployment
   base: '/',
+
   resolve: {
     alias: {
       '~': path.resolve(__dirname, './src'),
     },
   },
+
+  // -------------------------------------------------------------------
+  // BUILD SETTINGS (Render Safe)
+  // -------------------------------------------------------------------
   build: {
     target: 'esnext',
-    polyfillDynamicImport: false,
-    polyfillModulePreload: false,
     cssCodeSplit: false,
-    minify: 'terser',
-    terserOptions: {
-      output: {
-        comments: false,
-      },
-      module: true,
-      compress: {
-        passes: 3,
-        unsafe_math: true,
-        unsafe_methods: true,
-        unsafe_arrows: true,
-      },
-      mangle: {
-        properties: {
-          regex: /^_/,
-        },
-      },
-    },
+
+    // ❗ REPLACED terser → esbuild (fixes vanilla-extract errors)
+    minify: 'esbuild',
+
     rollupOptions: {
       output: {
-        // Disable vendor chunk.
         manualChunks: undefined,
         preferConst: true,
       },
     },
   },
+
+  // -------------------------------------------------------------------
+  // FIX vanilla-extract + Solid + Render behaviour
+  // -------------------------------------------------------------------
+  optimizeDeps: {
+    exclude: ['@vanilla-extract/css'],
+  },
+
+  ssr: {
+    noExternal: ['@vanilla-extract/css', '@vanilla-extract/vite-plugin'],
+  },
+
+  // -------------------------------------------------------------------
+  // PLUGINS
+  // -------------------------------------------------------------------
   plugins: [
-    createHtmlPlugin({
-      minify: true,
-    }),
-    // Vite always bundles or imports all scripts into one file.
-    // In unsupported browsers we want to display error message about it,
-    // but because everything is bundled into one file, main app bundle
-    // fails to load because of syntax errors and no message is displayed.
-    // This plugin fixes that by emiting script separetly
-    // and including it inside html.
+    createHtmlPlugin({ minify: true }),
+
     injectScriptsToHtmlDuringBuild({
       input: ['./src/disable-app-if-not-supported.ts'],
     }),
-    // If https://github.com/seek-oss/vanilla-extract/discussions/222 is ever implemented,
-    // this plugin can be replaced.
+
     mangleClassNames(),
-    vanillaExtractPlugin(),
+
+    vanillaExtractPlugin(),  // must be BEFORE solidPlugin()
+
     solidPlugin({
       hot: false,
     }),
-    // ViteWebfontDownload plugin removed to eliminate Google Fonts dependency
-    // Now using system fonts for better offline performance
+
     serviceWorker({
       manifest: {
         short_name: 'Osho',
