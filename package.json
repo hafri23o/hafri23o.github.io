@@ -22,16 +22,10 @@
   "devDependencies": {
     "@types/css-tree": "^1.0.7",
     "@types/js-yaml": "^4.0.9",
-
-    /** FIXED — required by Vite 7 **/
     "@types/node": "^20.11.17",
-
     "@typescript-eslint/eslint-plugin": "^5.23.0",
     "@typescript-eslint/parser": "^5.23.0",
-
-    /** UPDATED TO MATCH Vite 7 **/
     "@vanilla-extract/vite-plugin": "^5.1.1",
-
     "css-class-generator": "^2.0.0",
     "css-tree": "^2.1.0",
     "eslint": "^8.15.0",
@@ -40,16 +34,9 @@
     "eslint-plugin-prettier": "^4.0.0",
     "gh-pages": "^6.3.0",
     "prettier": "^2.6.2",
-
-    /** Typescript stays compatible with Solid **/
     "typescript": "^4.9.5",
-
-    /** UPDATED Vite 2 → Vite 7 (required for vanilla-extract) **/
     "vite": "^7.2.2",
-
     "vite-plugin-html": "^3.2.0",
-
-    /** Solid Vite plugin now supports Vite 7 **/
     "vite-plugin-solid": "^2.8.2"
   },
   "dependencies": {
@@ -60,13 +47,9 @@
     "@solid-primitives/deep": "^0.2.7",
     "@types/offscreencanvas": "^2019.6.4",
     "@types/wicg-file-system-access": "^2020.9.5",
-
-    /** UPDATED — compatible with Vite 7 runtime **/
     "@vanilla-extract/css": "^1.14.0",
-
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/sprinkles": "^1.4.0",
-
     "firebase": "^9.23.0",
     "buffer": "^6.0.3",
     "fuzzysort": "^3.1.0",
