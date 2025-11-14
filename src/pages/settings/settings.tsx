@@ -35,11 +35,15 @@ export default function SettingsPage() {
         }}
       >
         <h1 style={{ 'font-size': '22px', 'font-weight': 700, 'margin-bottom': '8px' }}>
-          Support this project
+          THANK YOU!
         </h1>
 
         <p style={{ color: '#6b6b6b', 'margin-top': '-6px' }}>
-          Choose a subscription or make a one-time donation. It keeps the music online ♥
+          Donate bitcoin to this address: bc1qhkv9gps0vr4wdjf9eaze2t9wwrxjxzcz0el3np   
+
+          OR
+
+          
         </p>
 
         <Show when={statusMsg()}>
@@ -116,7 +120,7 @@ function buttonStyle(): any {
     'border-radius': '9999px',
     'font-weight': 700,
     'text-decoration': 'none',
-    background: '#6d57c7',
+    background: '#000000',
     color: 'white',
     'text-align': 'center',
     'box-shadow': '0 4px 14px rgba(0,0,0,0.08)',
