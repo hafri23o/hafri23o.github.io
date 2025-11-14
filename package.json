@@ -57,7 +57,7 @@
     "js-yaml": "^4.1.0",
     "music-metadata": "^7.12.3",
     "nanoid": "^3.3.4",
-  "solid-js": "^1.9.5",
+  "solid-js": "1.6.12",
   "solid-app-router": "^0.4.1",
   "solid-utils": "^0.10.0"
   }
