@@ -1,7 +1,7 @@
 import { style } from '@vanilla-extract/css'
 import { sharedStyles, sprinkles } from '~/styles/styles.css'
 
-export const flatButton = sharedStyles.flatButton;
+export const { flatButton } = sharedStyles
 
 const modalBase = style({
   width: '100%',
