@@ -62,7 +62,7 @@
     box-shadow: 0 0 20px rgba(0,0,0,0.5); position: relative;">
 <button onclick="closePopup()" style="
       position:absolute; top:10px; right:15px; background:none; border:none;
-      color:#888; font-size:20px; cursor:pointer;">×</button>
+      color:#000; font-size:20px; cursor:pointer;">×</button>
 <h2 style="font-size:20px; margin-bottom:8px; font-weight:600;">Please help us</h2>
 <p style="font-size:14px; color:#ccc; margin-bottom:14px;">
 We are unemployed and struggling financially, this is our last atempt to change our financial situation. 
@@ -109,8 +109,8 @@ We are unemployed and struggling financially, this is our last atempt to change 
 </div>
 
 <script>
-  let raised = 30;
-  const goal = 12400;
+  let raised = 7000;
+  const goal = 13400;
 
   function updateProgress() {
     const percent = Math.min((raised / goal) * 100, 100);
@@ -136,3 +136,4 @@ We are unemployed and struggling financially, this is our last atempt to change 
 </script>
 </body>
 </html>
+
