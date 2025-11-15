@@ -78,30 +78,30 @@ We are unemployed and struggling financially, this is our last atempt to change 
 <div id="progress" style="background:#6cf; width:0%; height:100%; transition:width 0.5s ease;"></div>
 </div>
 
-<!-- NEW DONATION BUTTONS -->
+<!-- NEW DONATION BUTTONS WITH LINKS -->
 <div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:10px;">
-  <button onclick="goToAmount(5)" style="
+  <button onclick="openLink('https://www.google.com')" style="
         background:#000; border:none; color:#fff;
         font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
         $5
   </button>
 
-  <button onclick="goToAmount(20)" style="
+  <button onclick="openLink('https://www.youtube.com')" style="
         background:#000; border:none; color:#fff;
         font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
         $20
   </button>
 
-  <button onclick="goToAmount(50)" style="
-        background:#000; border:none; color:#fff;
-        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
-        $50
-  </button>
-
-  <button onclick="goToAmount(100)" style="
+  <button onclick="openLink('https://www.amazon.com')" style="
         background:#000; border:none; color:#fff;
         font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
         $100
+  </button>
+
+  <button onclick="openLink('https://www.tiktok.com')" style="
+        background:#000; border:none; color:#fff;
+        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
+        $500
   </button>
 </div>
 
@@ -118,8 +118,8 @@ We are unemployed and struggling financially, this is our last atempt to change 
     document.getElementById('raised').textContent = `$${raised.toLocaleString()}`;
   }
 
-  function goToAmount(amount) {
-    window.location.href = `/settings?amount=${amount}`;
+  function openLink(url) {
+    window.open(url, '_blank');
   }
 
   function closePopup() {
