@@ -115,9 +115,148 @@ function updateProgress() {
       updateProgress();
     }
   });
+</script><!doctype html >
+<html lang='en-US'>
+  <head>
+    <title>Osho Digital Library</title>
+    <meta charset='UTF-8'>
+    <base href='./'>
+
+    <meta http-equiv='Content-Security-Policy' content="
+      default-src 'none';
+      connect-src 'self' blob: *;
+      script-src 'self' blob: 'unsafe-inline' https://gc.zgo.at/;
+      style-src 'self' 'unsafe-inline';
+      font-src 'self';
+      manifest-src 'self';
+      img-src 'self' blob: https://snaeplayer.goatcounter.com/count https://oshoworld.com;
+      media-src 'self' blob: *;
+      child-src 'self' blob:;
+      form-action 'none';
+      base-uri 'none';
+    ">
+
+    <meta name='viewport' content='width=device-width, initial-scale=1, user-scalable=no'>
+    <meta name='theme-color' content='#2a2827'>
+    <meta name='description' content='A comprehensive digital library of Osho teachings and discourses.'>
+    <link rel='icon' href='/icons/icon_responsive.svg' type='image/svg+xml' />
+    <link rel="alternate icon" href="/icons/icon_16.png" sizes="16x16" type="image/png" />
+    <link rel='apple-touch-icon' href='/icons/apple-touch-icon.png' sizes='180x180' />
+  </head>
+  <body>
+    <noscript>
+      Please enable Javascript in order to use this app.
+    </noscript>
+    <div id='unsupported-browser' hidden>
+      <div>This browser does not support required technologies for this app to function correctly.</div>
+      <div>Please upgrade your browser to the latest version of:</div>
+      <a href='https://www.mozilla.org/en-US/firefox/new/'>Firefox</a>
+      <a href='https://www.microsoft.com/en-us/windows/microsoft-edge'>Edge</a>
+      <a href='https://www.google.com/chrome/'>Chrome</a>
+      <a href='https://www.apple.com/safari/'>Safari</a>
+    </div>
+
+    <script type='module' src='./src/index.ts'></script>
+    <script nomodule src="/nomodule.js"></script>
+    <script
+      src='https://gc.zgo.at/count.js'
+      data-goatcounter='https://snaeplayer.goatcounter.com/count'
+      crossorigin='anonymous'
+      async
+    >
+    </script>
+
+<!-- Donation Progress Popup -->
+<div id="donationPopup" style="
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none; justify-content: center; align-items: center;
+  z-index: 9999;">
+<div style="
+    background: #fff; color: #000; padding: 30px 40px;
+    border-radius: 14px; width: 360px; text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5); position: relative;">
+<button onclick="closePopup()" style="
+      position:absolute; top:10px; right:15px; background:none; border:none;
+      color:#888; font-size:20px; cursor:pointer;">×</button>
+<h2 style="font-size:20px; margin-bottom:8px; font-weight:600;">Please help us</h2>
+<p style="font-size:14px; color:#000; margin-bottom:14px;">
+We are unemployed and struggling financially, this is our last atempt to change our financial situation. 
+      We cant afford to publish our songs either, any help will be very big to us, thank you. 
+      (*this is a cheap website so it may update slowly)
+</p>
+
+<h3 style="margin-bottom:10px; font-weight:600">
+<span id="raised">$30</span> raised of $12,400
+</h3>
+
+<div style="background:#333; border-radius:8px; height:14px; overflow:hidden; margin-bottom:16px;">
+<div id="progress" style="background:#6cf; width:0%; height:100%; transition:width 0.5s ease;"></div>
+</div>
+
+<!-- NEW DONATION BUTTONS -->
+<div style="display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:10px;">
+  <button onclick="goToAmount(5)" style="
+        background:#000; border:none; color:#fff;
+        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
+        $5
+  </button>
+
+  <button onclick="goToAmount(20)" style="
+        background:#000; border:none; color:#fff;
+        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
+        $20
+  </button>
+
+  <button onclick="goToAmount(50)" style="
+        background:#000; border:none; color:#fff;
+        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
+        $50
+  </button>
+
+  <button onclick="goToAmount(100)" style="
+        background:#000; border:none; color:#fff;
+        font-weight:bold; padding:10px 16px; border-radius:8px; cursor:pointer;">
+        $100
+  </button>
+</div>
+
+</div>
+</div>
+
+<script>
+  let raised = 30;
+  const goal = 12400;
+
+  function updateProgress() {
+    const percent = Math.min((raised / goal) * 100, 100);
+    document.getElementById('progress').style.width = percent + '%';
+    document.getElementById('raised').textContent = `$${raised.toLocaleString()}`;
+  }
+
+  function goToAmount(amount) {
+    window.location.href = `/settings?amount=${amount}`;
+  }
+
+  function closePopup() {
+    document.getElementById('donationPopup').style.display = 'none';
+    sessionStorage.setItem('popupClosed', 'true');
+  }
+
+  window.addEventListener('load', () => {
+    if (!sessionStorage.getItem('popupClosed')) {
+      document.getElementById('donationPopup').style.display = 'flex';
+      updateProgress();
+    }
+  });
 </script>
 </body>
 </html>
+
+</body>
+</html>
+
 
 
 
