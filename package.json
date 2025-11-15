@@ -37,7 +37,7 @@
     "typescript": "^4.9.5",
     "vite": "^7.2.2",
     "vite-plugin-html": "^3.2.0",
-    "vite-plugin-solid": "^2.8.2"
+    "vite-plugin-solid": "2.5.0"
   },
   "dependencies": {
     "@a11y/focus-trap": "^1.0.5",
