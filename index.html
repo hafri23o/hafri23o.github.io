@@ -72,7 +72,7 @@ We are unemployed and struggling financially, this is our last atempt to change 
 </p>
 
 <h3 style="margin-bottom:10px; font-weight:600">
-<span id="raised">$30</span> raised of $12,400
+<span id="raised">$30</span> raised of $15,400
 </h3>
 
 <div style="background:#333; border-radius:8px; height:14px; overflow:hidden; margin-bottom:16px;">
@@ -111,7 +111,7 @@ We are unemployed and struggling financially, this is our last atempt to change 
 
 <script>
   let raised = 30;
-  const goal = 13400;
+  const goal = 15400;
 
   function updateProgress() {
     const percent = Math.min((raised / goal) * 100, 100);
@@ -125,18 +125,18 @@ We are unemployed and struggling financially, this is our last atempt to change 
 
   function closePopup() {
     document.getElementById('donationPopup').style.display = 'none';
-    sessionStorage.setItem('popupClosed', 'true');
+    // Removed sessionStorage so popup ALWAYS shows again on reload
   }
 
+  // Always show popup on every page load
   window.addEventListener('load', () => {
-    if (!sessionStorage.getItem('popupClosed')) {
-      document.getElementById('donationPopup').style.display = 'flex';
-      updateProgress();
-    }
+    document.getElementById('donationPopup').style.display = 'flex';
+    updateProgress();
   });
 </script>
 </body>
 </html>
+
 
 
 
